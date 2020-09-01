@@ -9,8 +9,8 @@ systemctl start rpcbind
 systemctl start nfs-server
 systemctl start nfs-lock
 systemctl start nfs-idmap
-mkdir -p /nfs-share
-chmod -R 777 /nfs-share
+mkdir -p /nfs_share
+chmod -R 777 /nfs_share
 echo '/nfs_share  192.168.50.11/32(rw,sync,no_root_squash,no_all_squash)' >> /etc/exports
 exportfs -a
 systemctl restart nfs-server
